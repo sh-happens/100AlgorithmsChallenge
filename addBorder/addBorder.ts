@@ -1,5 +1,10 @@
 export function addBorder(picture: string[]): any {
-  const wall = '*'.repeat(picture[0].length + 2)
+  const lengthOfWall = picture[0].length + 2
+  let wall = '';
+
+  for(let i = 0; i < lengthOfWall; i++) {
+    wall = wall.concat('*');
+  }
 
   picture.unshift(wall);
   picture.push(wall);
